@@ -1,0 +1,33 @@
+QUESTION 1
+
+n= 5
+
+
+for i in range(1, n + 1):
+   
+    print(' ' * (n - i) + '*' * i)
+
+
+QUESTION 2
+def get_number(prompt):
+    while True:
+        try:
+            number = float(input(prompt))
+            return number
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+def divide_numbers():
+    while True:
+        num1 = get_number("Enter the first number: ")
+        num2 = get_number("Enter the second number: ")
+
+        try:
+            result = num1 / num2
+            print(f"The result of dividing {num1} by {num2} is {result}")
+            break
+        except ZeroDivisionError:
+            print("Error: Division by zero is not allowed. Please enter a non-zero second number.")
+
+
+divide_numbers()
